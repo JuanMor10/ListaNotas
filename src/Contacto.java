@@ -1,4 +1,4 @@
-import Auxiliar.ValidaEmail;
+import Auxiliar.Validador;
 import Excepciones.ExceptionContacto;
 
 /**
@@ -21,7 +21,7 @@ public class Contacto {
      * @throws ExceptionContacto Si el email no es valido
      */
     public Contacto(String nombre, String apellido, String email, String direccion, String telefono) throws ExceptionContacto {
-        if(ValidaEmail.validaEmail(email)) {
+        if(Validador.validaEmail(email)) {
             this.nombre = nombre;
             this.apellido = apellido;
             this.email = email;
@@ -77,7 +77,7 @@ public class Contacto {
      * @param email email a setear
      */
     public void setEmail(String email) {
-        if(ValidaEmail.validaEmail(email)) {
+        if(Validador.validaEmail(email)) {
             this.email = email;
         } else {
             System.out.println("El email no es valido");
