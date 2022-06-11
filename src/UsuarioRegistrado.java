@@ -29,6 +29,7 @@ public class UsuarioRegistrado extends Usuario {
         super(nombre, apellido, correo, contrasena);
         this.tipoUsuario= tipoUsuario;
         this.nombreUsuario= usuario;
+        Sistema.addUsuario(this);
     }
 
     /**
@@ -46,7 +47,6 @@ public class UsuarioRegistrado extends Usuario {
     }
 
     /**
-     *
      * @return Lista de notas
      */
     public List<Notas> getNotas() {
@@ -229,5 +229,13 @@ public class UsuarioRegistrado extends Usuario {
      */
     public void setNotas(List<Notas> notas) {
         this.notas = notas;
+    }
+
+    /**
+     * ToString de la clase usuario registado
+     */
+    @Override
+    public String toString() {
+        return String.format("%s %s,%s,%s,%s,%s",getNombre(),getApellido(),getCorreo(),getContrasena(),getTipoUsuario().toString(),getNombreUsuario());
     }
 }

@@ -1,7 +1,5 @@
 import Excepciones.ExcepcionUsuario;
 
-import java.time.LocalDate;
-
 /**
  * @author: Juan Mora
  * @version: 06/06/2022
@@ -44,6 +42,7 @@ public class Test {
                 TipoUsuarioRegistrado.apodo, "Joelcio"));
 
         System.out.println(usuario.getNombre());
+
     }
 }
 

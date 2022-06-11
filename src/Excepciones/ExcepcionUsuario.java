@@ -13,7 +13,7 @@ public class ExcepcionUsuario extends Exception {
         super(message);
     }
 
-    /**
+    /** Metodo que devuelve el mensaje de error
      * @return the message
      */
     @Override
